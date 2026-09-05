@@ -14,8 +14,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "git submodule update --init --recursive && npm run build:agent",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "build:studio": "npm run build -w studio",
     "build:workflow": "npm run build -w workflow-builder",
     "build:agent": "npm run build -w ai-agent",
