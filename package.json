@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "git submodule update --init --recursive packages/Open-Poe-AI && npm run build:agent",
+    "prebuild": "git submodule update --init --recursive && npm run build:agent && npm run build:workflow && npm run build:design",
     "start": "next start",
     "lint": "eslint .",
     "build:studio": "npm run build -w studio",
